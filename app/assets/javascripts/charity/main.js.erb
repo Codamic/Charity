@@ -1,0 +1,78 @@
+jQuery(function ($) {
+
+    'use strict';
+
+	// ----------------------------------------------
+    // Table of index
+    // ----------------------------------------------
+
+    /*-----------------------------------------------
+    # Mobile Toggle Control
+    # Menu add class
+    # Menu Scrolling
+	# Slider images Source
+    # Parallax Scrolling
+    # Magnific Popup
+    -------------------------------------------------*/
+
+	/*==============================================================*/
+	//Mobile Toggle Control
+	/*==============================================================*/
+	 $(function(){
+		 var navMain = $("#main-menu");
+		 navMain.on("click", "a", null, function () {
+			 navMain.collapse('hide');
+		 });
+	 });
+
+	// ----------------------------------------------
+    // Menu Scrolling
+    // ----------------------------------------------
+	$('#navigation .navbar-nav').onePageNav({
+		currentClass: 'active',
+		filter: ':not(.exclude)',
+	});
+
+	// ----------------------------------------------
+    // Slider images Source
+    // ----------------------------------------------
+	(function () {
+		$('#slider-section').vegas({
+			slides: [
+				{ src: '<%= image_path "slider/1.jpg" %>' },
+				{ src: '<%= image_path "slider/2.jpg" %>' },
+				{ src: '<%= image_path "slider/3.jpg" %>' },
+			]
+		});
+	}());
+
+	// ----------------------------------------------
+    // Parallax Scrolling
+    // ----------------------------------------------
+
+	(function () {
+		function parallaxInit() {
+			$("#donations").parallax("50%", 0.3);
+			$("#word-for-humanity").parallax("50%", 0.3);
+		}
+		parallaxInit();
+	}());
+
+
+	// ----------------------------------------------
+    // Magnific Popup
+    // ----------------------------------------------
+
+	(function () {
+		$('#photo-gallery .image-link').magnificPopup({
+			gallery: {
+			  enabled: true
+			},
+			type: 'image'
+		});
+		$('.video-link').magnificPopup({type:'iframe'});
+	}());
+
+
+
+});

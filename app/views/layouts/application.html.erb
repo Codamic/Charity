@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="CodamicTech">
+    <!--title-->
+    <title>Isles of the blessed</title>
+
+    <%= csrf_meta_tags %>
+
+    <!--Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,700,800,100,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,900' rel='stylesheet' type='text/css'>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<%= image_path 'ico/apple-touch-icon-144-precomposed.png' %>">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<%= image_path 'ico/apple-touch-icon-114-precomposed.png' %>">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"   href="<%= image_path 'ico/apple-touch-icon-72-precomposed.png' %>">
+    <link rel="apple-touch-icon-precomposed"                 href="<%= image_path 'ico/apple-touch-icon-57-precomposed.png' %>">
+
+  </head>
+
+  <body>
+
+    <header id="navigation">
+      <div class="navbar navbar-fixed-top" role="banner">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+              <img class="img-responsive" src="images/logo.png" alt="logo">
+            </a>
+          </div>
+          <nav id="main-menu" class="collapse navbar-collapse navbar-right">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#slider-section">Home</a></li>
+	      <li><a href="#who-we-are">Who We Are</a></li>
+              <li><a href="#cause-list">Cause</a></li>
+	      <li><a href="#event-section">Events</a></li>
+              <li><a href="#our-member">Volunteer</a></li>
+              <li><a href="#photo-gallery">Gallery</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header><!--/#navigation-->
+
+
+    <%= yield %>
+
+    <footer id="footer">
+      <div class="container">
+	<div class="copyright-text text-center">
+	  <p>&copy; copyright 2016 by <a href="#">Codamic Technologies.</a> All rights reserved.</p>
+	</div>
+      </div>
+    </footer><!--/#footer-->
+
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </body>
+</html>
