@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
-
+  post 'messages', to: "messages#create", as: :messages
   root "welcome#index"
 end
